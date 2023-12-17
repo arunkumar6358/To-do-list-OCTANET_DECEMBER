@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f7f7;
+}
+
+.container {
+    width: 600px;
+    height: 600px;
+    background-color: orange;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container h1 {
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#userinput {
+    padding: 20px;
+    user-select: none;
+}
+
+input[type="text"] {
+    width: 30em;
+    height: 2.5em;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid brown;
+    background-color: transparent;
+}
+
+#submitbtn {
+    cursor: pointer;
+    padding: 10px 25px;
+    font-size: 30px;
+    background-color: rgba(0, 0, 255, 0.671);
+    color: wheat;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.2s ease background-color;
+}
+
+#submitbtn:hover {
+    background-color: rgba(0, 0, 255, 0.750);
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 25px;
+    height: 25px;
+    border: 2px solid brown;
+    background-color: #fff;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+input[type="checkbox"]:checked {
+    background-color: brown;
+}
+
+input[type="checkbox"]:checked::before {
+    content: '\2713';
+    display: block;
+    text-align: center;
+    line-height: 25px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.checklist-item {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 40px;
+    user-select: none;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.task-input {
+    height: 2.5em;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid brown;
+    background-color: transparent;
+    font-size: 16px;
+}
+@media all and (max-width: 992px) {
+    .container {
+        width: 600px;
+        transition: width 0.3s ease; 
+    }
+}
+
+@media all and (max-width: 768px) {
+    .container {
+        width: 500px;
+        transition: width 0.3s ease; 
+    }
+    input[type="text"] {
+        width: 20em;
+        transition: width 0.3s ease; 
+        height: 2.5em;
+        outline: none;
+        border: none;
+        border-bottom: 2px solid brown;
+        background-color: transparent;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .container {
+        width: 400px;
+        transition: width 0.3s ease; 
+    }
+    input[type="text"] {
+        width: 15em;
+        transition: width 0.3s ease; 
+        height: 2.5em;
+        outline: none;
+        border: none;
+        border-bottom: 2px solid brown;
+        background-color: transparent;
+    }
+}
